@@ -80,10 +80,11 @@ const SearchPage = () => {
         <button onClick={handleSearch} disabled={!query || !startYear || !endYear} className="search-button">Search</button>
       </div>
       <div className="search-results">
-        {searchResults.length > 0 ? (
+        {query && searchStarted && searchResults.length > 0 ? (
             renderSearchResults()
           ) : (
-            <p> {searchStarted && "No results found." }</p>
+            <p> {searchStarted ? "Loading..." : "No results found yet." }</p>
+            // TODO: Handle the searchStarted confusion above
           )
         }
       </div>
