@@ -83,7 +83,7 @@ const SearchPage = () => {
         {query && searchStarted && searchResults.length > 0 ? (
             renderSearchResults()
           ) : (
-            <p> {searchStarted ? "Loading..." : "No results found yet." }</p>
+            <p> {searchStarted && query && "No results found."}</p>
             // TODO: Handle the searchStarted confusion above
           )
         }

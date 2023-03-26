@@ -32,6 +32,11 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .search-form button:disabled {
+    background-color: #999999;
+    cursor: not-allowed
+  }
   
   .search-results {
     display: grid;
